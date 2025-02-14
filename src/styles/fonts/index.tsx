@@ -1,5 +1,6 @@
 // import "./Gilroy/Gilroy-Regular.otf";
 // import "./Gilroy/Gilroy-SemiBold.otf";
+import { Noto_Sans } from "next/font/google";
 import nextFontLocal from "next/font/local";
 
 export const gilroy = nextFontLocal({
@@ -10,4 +11,13 @@ export const gilroy = nextFontLocal({
   adjustFontFallback: "Times New Roman",
   preload: true,
   fallback: ["system-ui"],
+});
+
+export const notoSans = Noto_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  fallback: ["system-ui"],
+  preload: true,
+  adjustFontFallback: true,
 });
