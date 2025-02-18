@@ -14,10 +14,10 @@ export async function fetchPost(id: string): Promise<Post> {
     `https://jsonplaceholder.typicode.com/posts/${id}`
   );
   const data: Post = await result.json();
-  return data;
-  // return new Promise<Post>((resolve, reject) => {
-  //   setTimeout(() => {
-  //     resolve(data);
-  //   }, 5000);
-  // });
+  // return data;
+  return new Promise<Post>((resolve, reject) => {
+    setTimeout(() => {
+      resolve(data);
+    }, 5000);
+  });
 }
