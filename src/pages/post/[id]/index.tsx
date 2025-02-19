@@ -30,6 +30,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     return { notFound: true };
   }
   const post = await fetchPost(id);
+  console.log("-----------");
+  console.log(post);
 
   return {
     props: { post },
